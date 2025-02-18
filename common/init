@@ -39,7 +39,7 @@ fi
 REALHOME=${SNAP_REAL_HOME}
 
 # Set config folder to local path
-export XDG_CONFIG_HOME="$SNAP_USER_DATA/.config"
+export XDG_CONFIG_HOME="${FORCE_XDG_CONFIG_HOME:-$SNAP_USER_DATA/.config}"
 ensure_dir_exists "$XDG_CONFIG_HOME"
 chmod 700 "$XDG_CONFIG_HOME"
 
